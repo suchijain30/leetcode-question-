@@ -13,5 +13,5 @@ public:
         // If the adjustedWinner is 0, it implies that the winner is the nth player.
         // Otherwise, return the index considering 1-based indexing.
         return adjustedWinner == 0 ? n : adjustedWinner;
-    }
+    } // cheating ke h mena 
 };
