@@ -12,15 +12,53 @@
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
-        if(root ==NULL)
+        // if(root ==NULL)
+        // {
+        //     return 0 ;
+        // }
+        // int lefth = maxDepth(root->left);
+        // int righth = maxDepth(root->right);
+
+        // int height = max(lefth, righth) +1 ;
+        // return height;
+
+
+        if(root == NULL)
         {
             return 0 ;
         }
-        int lefth = maxDepth(root->left);
-        int righth = maxDepth(root->right);
-
-        int height = max(lefth, righth) +1 ;
-        return height;
-
+        queue<TreeNode*>q ;
+        q.push(root);
+        q.push(NULL);      // jitne null utne level 
+        int count =1 ;     // jitne level utni height 
+        while(!q.empty())
+        {
+            TreeNode* front = q.front();
+            q.pop();
+            if(front==NULL)
+            {
+                cout<<endl;
+                if(!q.empty()) 
+                {
+                count++ ;
+                q.push(NULL);
+                }
+                
+            }
+            else
+            {
+            if(front->left!= NULL)
+            {
+                q.push(front->left);
+                // countleft++ ;
+            }
+            if(front->right !=NULL)
+            {
+                q.push(front->right);
+                // countright++ ;
+            }
+            }
+        }
+        return count ;
     }
 };
