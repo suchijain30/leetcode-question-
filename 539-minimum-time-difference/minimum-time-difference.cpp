@@ -11,14 +11,7 @@ public:
             ans.push_back(hour * 60 + minute);
         }
         sort(ans.begin(), ans.end());
-        ans.push_back(ans[0] + totalMinutesInDay);
-        for(int i=0 ; i<ans.size(); i++)
-        {
-            if(ans[i]==0)
-            {
-                ans[i]= totalMinutesInDay ;
-            }
-        }
+        ans.push_back(ans[0] + totalMinutesInDay); // comparing 000 
         int diff = totalMinutesInDay ;
         for (int i = 0; i < ans.size()-1; ++i) {
             diff = min(diff, abs(ans[i] - ans[i +1]) );
