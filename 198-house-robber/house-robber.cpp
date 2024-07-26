@@ -32,7 +32,7 @@ int solveusingmemo(vector<int>&dp , int index, vector<int>&nums)
     int rob(vector<int>& nums) {
        int n = nums.size();
        int index =0 ;
-       vector<int>dp(n+1 ,-1);
+       vector<int>dp(n ,-1);
        int ans = solveusingmemo(dp , index, nums);
        return ans ;
     }
