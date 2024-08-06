@@ -9,7 +9,7 @@ public:
         }
         for(auto str : stones)
         {
-            if(str= hash[str])
+            if(hash[str])
             {
                 count++ ;
             }
