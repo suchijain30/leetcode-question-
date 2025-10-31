@@ -20,8 +20,7 @@ class Solution(object):
             curr_length = len(q)
             for _ in range(curr_length):
                 node = q.popleft()
-                curr_level = node.val
-
+                curr_level = node.val #catch this add last value in queue which is last node
                 if node.left:
                     q.append(node.left)
                 if node.right:
