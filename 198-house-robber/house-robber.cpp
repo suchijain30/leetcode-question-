@@ -10,6 +10,25 @@ public:
 //     int ans = max(option1 , option2);
 //     return ans ;
 // }
+int house(vector<int>& nums )
+{
+    int n = nums.size();
+    int i=0 , j=1;
+    int amounta =0;
+    int amountb=0;
+    while(i<n)
+    {
+        amounta += nums[i];
+        i = i+2;
+    }
+    while(j<n)
+    {
+        amountb +=nums[j];
+        j = j+1;
+    }
+    int res = max(amounta, amountb);
+    return res;
+}
 
 
 int solveusingmemo(vector<int>&dp , int index, vector<int>&nums)
